@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         hostname: 'keaprojects.com.au',
         pathname: '/wp-content/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 };

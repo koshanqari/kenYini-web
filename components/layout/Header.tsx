@@ -10,8 +10,8 @@ import Button from '../ui/Button';
 const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Library', href: '/library' },
-  { name: 'Fellowship', href: '/fellowship' },
   { name: 'Media', href: '/media' },
+  { name: 'Fellowship', href: '/fellowship' },
   { name: 'Get Involved', href: '/get-involved' },
   { name: 'Impact', href: '/impact' },
   { name: 'Contact', href: '/contact' },
