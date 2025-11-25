@@ -14,8 +14,8 @@ const features = [
     category: 'Creative Article',
     author: 'Dr. Awadhesh Prasad',
     date: 'Nov 22, 2025',
-    gradient: 'from-emerald-500 to-teal-600',
     href: '/journal/ownership-to-kinship',
+    color: 'primary',
   },
   {
     icon: BookOpen,
@@ -25,8 +25,8 @@ const features = [
     category: 'Book',
     author: 'Jeevak',
     readMore: 'Available Now',
-    gradient: 'from-purple-500 to-indigo-600',
     href: '/books',
+    color: 'accent',
   },
   {
     icon: GraduationCap,
@@ -36,8 +36,8 @@ const features = [
     category: 'Fellowship',
     author: 'Apply by Dec 31, 2025',
     readMore: 'Learn More',
-    gradient: 'from-amber-500 to-orange-600',
     href: '/fellowship',
+    color: 'dark',
   },
 ];
 
@@ -96,9 +96,7 @@ export default function FeaturedContent() {
                   <div className="p-8 h-full flex flex-col">
                     {/* Icon */}
                     <div className="mb-6">
-                      <div
-                        className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
-                      >
+                      <div className={`w-16 h-16 rounded-xl bg-kanyini-${feature.color} flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                     </div>

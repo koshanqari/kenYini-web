@@ -10,21 +10,21 @@ const values = [
     title: 'Mission',
     description:
       'To inspire and facilitate sustainable human co-habitation on planet Earth by reducing conflict and deepening our connectedness.',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'primary',
   },
   {
     icon: Eye,
     title: 'Vision',
     description:
       'To create a not-for-profit educational and service-driven movement that honours our interconnectedness, celebrates our diversity and acknowledges our shared dependence on planet Earth.',
-    color: 'from-kanyini-primary to-kanyini-dark',
+    color: 'dark',
   },
   {
     icon: Heart,
     title: 'Values',
     description:
       'We are an inclusive ecosystem, valuing all forms of life, embracing scientific knowledge alongside philosophical inquiry, and committing to the highest standards of integrity.',
-    color: 'from-kanyini-accent to-orange-600',
+    color: 'accent',
   },
 ];
 
@@ -85,9 +85,7 @@ export default function MissionVision() {
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border border-gray-100 hover:border-kanyini-primary/30 hover:-translate-y-2">
                     {/* Icon */}
                     <div className="mb-6">
-                      <div
-                        className={`w-16 h-16 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}
-                      >
+                      <div className={`w-16 h-16 rounded-xl bg-kanyini-${value.color} flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
@@ -99,11 +97,6 @@ export default function MissionVision() {
                     <p className="text-gray-600 leading-relaxed">
                       {value.description}
                     </p>
-
-                    {/* Hover Accent */}
-                    <div
-                      className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${value.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
-                    />
                   </div>
                 </div>
               </motion.div>

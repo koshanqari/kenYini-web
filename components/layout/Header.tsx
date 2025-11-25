@@ -9,8 +9,7 @@ import Button from '../ui/Button';
 
 const navigation = [
   { name: 'About', href: '/about' },
-  { name: 'Journal', href: '/journal' },
-  { name: 'Books', href: '/books' },
+  { name: 'Library', href: '/library' },
   { name: 'Fellowship', href: '/fellowship' },
   { name: 'Media', href: '/media' },
   { name: 'Get Involved', href: '/get-involved' },
@@ -59,7 +58,7 @@ export default function Header() {
                 priority
               />
               <span className="text-xl font-bold text-kanyini-primary hidden sm:inline">
-                KanYini
+              KanYini
               </span>
             </motion.div>
           </Link>

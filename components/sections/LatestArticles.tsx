@@ -18,7 +18,7 @@ const articles = [
     },
     date: 'November 22, 2025',
     readTime: '8 min read',
-    gradient: 'from-emerald-500 to-teal-600',
+    color: 'primary',
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const articles = [
     },
     date: 'November 21, 2025',
     readTime: '12 min read',
-    gradient: 'from-purple-500 to-indigo-600',
+    color: 'accent',
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const articles = [
     },
     date: 'September 18, 2025',
     readTime: '10 min read',
-    gradient: 'from-amber-500 to-orange-600',
+    color: 'dark',
   },
 ];
 
@@ -103,20 +103,17 @@ export default function LatestArticles() {
             >
               <Card className="h-full group cursor-pointer overflow-hidden bg-white border-gray-200 hover:border-kanyini-primary/30">
                 {/* Featured Image Placeholder */}
-                <div
-                  className={`h-48 bg-gradient-to-br ${article.gradient} relative overflow-hidden`}
-                >
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                <div className={`h-48 bg-kanyini-${article.color} relative overflow-hidden`}>
                   <motion.div
                     initial={{ scale: 1 }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full flex items-center justify-center text-white text-6xl font-bold opacity-30"
+                    className="w-full h-full flex items-center justify-center text-white text-6xl font-bold opacity-40"
                   >
                     {article.author.avatar}
                   </motion.div>
                   {/* Category Badge */}
-                  <span className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-kanyini-primary text-sm font-medium rounded-full">
+                  <span className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-sm font-medium rounded-full">
                     {article.category}
                   </span>
                 </div>
@@ -133,9 +130,7 @@ export default function LatestArticles() {
                   {/* Meta */}
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                     <div className="flex items-center space-x-3">
-                      <div
-                        className={`w-10 h-10 rounded-full bg-gradient-to-br ${article.gradient} flex items-center justify-center text-white font-bold text-sm`}
-                      >
+                      <div className={`w-10 h-10 rounded-full bg-kanyini-${article.color} flex items-center justify-center text-white font-bold text-sm shadow-md`}>
                         {article.author.avatar}
                       </div>
                       <div>

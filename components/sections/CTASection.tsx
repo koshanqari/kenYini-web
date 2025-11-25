@@ -40,11 +40,10 @@ export default function CTASection() {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-kanyini-primary to-kanyini-dark rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity" />
-            <div className="relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-kanyini-primary/20 hover:border-kanyini-primary hover:-translate-y-1">
+            <div className="relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-kanyini-dark/20 hover:border-kanyini-dark hover:-translate-y-1">
               {/* Icon */}
               <div className="mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-kanyini-primary to-kanyini-dark flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-kanyini-dark flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <PenTool className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -76,11 +75,10 @@ export default function CTASection() {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-kanyini-accent to-orange-600 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity" />
-            <div className="relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-cyan-500/20 hover:border-cyan-500 hover:-translate-y-1">
+            <div className="relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-kanyini-accent/20 hover:border-kanyini-accent hover:-translate-y-1">
               {/* Icon */}
               <div className="mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-kanyini-accent to-orange-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-kanyini-accent flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -95,7 +93,7 @@ export default function CTASection() {
               </p>
 
               {/* CTA */}
-              <Button size="lg" variant="outline" className="w-full md:w-auto border-cyan-500 text-cyan-600 hover:bg-cyan-500 hover:text-white">
+              <Button size="lg" variant="outline" className="w-full md:w-auto">
                 Get Involved
               </Button>
 
