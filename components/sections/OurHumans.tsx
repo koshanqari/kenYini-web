@@ -153,8 +153,8 @@ export default function OurHumans() {
                 className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6"
               >
                 {visibleMembers.map((member, idx) => (
-                  <motion.div
-                    key={member.name}
+            <motion.div
+              key={member.name}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
@@ -191,27 +191,27 @@ export default function OurHumans() {
                       
                       {/* Decorative ring */}
                       <div className={`absolute inset-0 rounded-full border-4 border-kanyini-${member.color}/30 scale-110 group-hover:scale-125 transition-transform duration-500`} />
-                    </div>
+                </div>
 
-                    {/* Content */}
+                {/* Content */}
                     <div className="space-y-3">
                       <h3 className="text-2xl md:text-3xl font-bold text-gray-900 group-hover:text-kanyini-primary transition-colors">
-                        {member.name}
-                      </h3>
+                  {member.name}
+                </h3>
                       <p className={`text-lg md:text-xl font-medium text-kanyini-${member.color}`}>
-                        {member.role}
-                      </p>
+                  {member.role}
+                </p>
                       <p className="text-base text-gray-700 leading-relaxed px-2">
-                        {member.description}
-                      </p>
-                      {member.subtitle && (
+                  {member.description}
+                </p>
+                {member.subtitle && (
                         <p className="text-sm text-gray-500 italic px-2">
-                          {member.subtitle}
-                        </p>
-                      )}
-                    </div>
-                  </motion.div>
-                ))}
+                    {member.subtitle}
+                  </p>
+                )}
+              </div>
+            </motion.div>
+          ))}
               </motion.div>
             </AnimatePresence>
 

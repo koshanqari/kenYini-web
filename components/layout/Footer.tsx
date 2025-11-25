@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Linkedin, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Twitter, Instagram, Youtube, Zap, Users, Heart, Sparkles } from 'lucide-react';
 import Button from '../ui/Button';
 
 const footerLinks = {
@@ -36,6 +36,98 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-kanyini-secondary text-white">
+      {/* CTA Section */}
+      <div className="relative bg-gradient-to-br from-kanyini-dark via-kanyini-primary to-kanyini-accent overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-1000" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <Sparkles className="w-8 h-8 text-white animate-pulse" />
+                <h2 className="text-4xl md:text-5xl font-bold text-white">
+                  Join the Movement
+                </h2>
+                <Sparkles className="w-8 h-8 text-white animate-pulse" />
+              </div>
+              
+              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto font-light">
+                Be part of a global community creating real change. Connect, collaborate, and make impact together.
+              </p>
+
+              {/* Feature Pills */}
+              <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30"
+                >
+                  <Users className="w-5 h-5 text-white" />
+                  <span className="text-white font-medium">Connect with Change-makers</span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30"
+                >
+                  <Heart className="w-5 h-5 text-white" />
+                  <span className="text-white font-medium">Support Projects You Love</span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30"
+                >
+                  <Zap className="w-5 h-5 text-white" />
+                  <span className="text-white font-medium">Create Real Impact</span>
+                </motion.div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <motion.a
+                  href="https://kan-yini-connect.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-kanyini-dark hover:bg-gray-100 font-bold text-lg px-8 py-6 rounded-full shadow-2xl"
+                  >
+                    <Zap className="w-6 h-6 mr-2" />
+                    Join Kanyini Connect
+                  </Button>
+                </motion.a>
+                <motion.a
+                  href="/kanyini-connect"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button 
+                    size="lg" 
+                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold text-lg px-8 py-6 rounded-full"
+                  >
+                    Learn More
+                  </Button>
+                </motion.a>
+              </div>
+
+              <p className="text-white/70 text-sm mt-8">
+                Free to join • 10,000+ members • Make a difference today
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">

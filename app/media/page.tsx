@@ -24,6 +24,7 @@ interface MediaItem {
   episodeNumber?: number;
   season?: number;
   host?: string;
+  videoUrl?: string;
 }
 
 const mediaContent: MediaItem[] = [
@@ -39,7 +40,7 @@ const mediaContent: MediaItem[] = [
     category: 'philosophy',
     featured: true,
     trending: true,
-    videoUrl: 'https://www.youtube.com/embed/29XymHesxa0',
+    videoUrl: 'https://www.youtube.com/embed/JrqtU4T870Y',
   },
   {
     id: 2,
