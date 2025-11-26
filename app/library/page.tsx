@@ -583,7 +583,7 @@ function LibraryPageContent() {
                   }`}
                 >
                   <FileText className="w-4 h-4 inline mr-2" />
-                  Articles
+                  Kanyini Earth Journal
                 </button>
                 <button
                   onClick={() => setActiveType('submit')}

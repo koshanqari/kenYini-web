@@ -15,7 +15,7 @@ const navigation = [
     dropdown: [
       { name: 'All Content', href: '/library?filter=all' },
       { name: 'Books', href: '/library?filter=books' },
-      { name: 'Articles', href: '/library?filter=articles' },
+      { name: 'Kanyini Earth Journal', href: '/library?filter=articles' },
       { name: 'Submit Article', href: '/library?filter=submit' },
       { name: 'KEJ Editor', href: '/library?filter=editor' },
     ]
