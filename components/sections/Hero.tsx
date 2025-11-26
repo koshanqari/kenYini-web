@@ -6,8 +6,10 @@ import { useEffect, useState } from 'react';
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -59,7 +61,7 @@ export default function Hero() {
         />
         
         {/* Floating Particles */}
-        {typeof window !== 'undefined' && [...Array(20)].map((_, i) => (
+        {isMounted && [...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-kanyini-primary rounded-full"

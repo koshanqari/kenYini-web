@@ -22,22 +22,19 @@
     text-wrap: balance;
   }
   
-  /* Custom scrollbar */
+  /* Hide scrollbar for all browsers */
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    display: none;
   }
   
-  ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+  /* Hide scrollbar for Firefox */
+  * {
+    scrollbar-width: none;
   }
   
-  ::-webkit-scrollbar-thumb {
-    @apply bg-kanyini-primary/50 rounded-lg;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-kanyini-primary;
+  /* Hide scrollbar for IE and Edge */
+  * {
+    -ms-overflow-style: none;
   }
   
   /* Selection */
