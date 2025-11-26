@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
-import Button from '../ui/Button';
+import { Sparkles, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function Hero() {
@@ -169,43 +168,6 @@ export default function Hero() {
             A <span className="text-kanyini-primary font-medium">not-for-profit</span> educational and service-driven movement reducing conflict
             and deepening our <span className="text-cyan-400 font-medium">interconnectedness</span> through media and social entrepreneurship
           </motion.p>
-
-          {/* CTA Buttons with Tech Glow */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button size="lg" className="group relative overflow-hidden">
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{ x: ['-100%', '200%'] }}
-                  transition={{ duration: 3, repeat: Infinity, repeatDelay: 1 }}
-                />
-                <span className="relative flex items-center">
-                  Read Our Stories
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Button>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-kanyini-primary/50 text-white hover:bg-kanyini-primary/20 hover:border-kanyini-primary backdrop-blur-sm"
-              >
-                Join Our Mission
-              </Button>
-            </motion.div>
-          </motion.div>
 
           {/* Tech-ish Floating Stats */}
           <motion.div

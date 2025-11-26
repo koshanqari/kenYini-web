@@ -491,38 +491,6 @@ export default function MediaPage() {
             </motion.div>
           )}
         </section>
-
-        {/* Subscribe CTA */}
-        <section className="px-4 sm:px-8 lg:px-16 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-kanyini-primary via-kanyini-dark to-black p-12 text-center"
-          >
-            <motion.div
-              animate={{ 
-                scale: [1, 1.2, 1],
-                rotate: [0, 180, 360]
-              }}
-              transition={{ duration: 20, repeat: Infinity }}
-              className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"
-            />
-            
-            <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-              <Sparkles className="w-12 h-12 mx-auto text-white" />
-              <h2 className="text-4xl sm:text-5xl font-bold">
-                Never Miss a Moment
-              </h2>
-              <p className="text-xl text-gray-300">
-                Subscribe to get notified when we drop new videos, podcasts, and series
-              </p>
-              <button className="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-200 transition-all transform hover:scale-105 shadow-2xl">
-                Subscribe Now
-              </button>
-            </div>
-          </motion.div>
-        </section>
       </div>
 
       <style jsx global>{`
